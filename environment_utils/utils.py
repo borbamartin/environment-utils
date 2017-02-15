@@ -13,6 +13,13 @@ class Environment(Enum):
     def value(self):
         return self._name_
 
+    @classmethod
+    def from_string(cls, name):
+        if name.lower() in ['prod', 'production']:
+            return cls.PRODUCTION
+        else:
+            return getattr(cls, name.upper(), None)
+
     TEST1, TEST2, TEST3, TEST4, DEV, QA, UAT, STAGING, PRODUCTION = range(9)
 
 
