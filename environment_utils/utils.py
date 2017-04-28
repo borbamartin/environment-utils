@@ -20,7 +20,7 @@ class Environment(Enum):
         else:
             return getattr(cls, name.upper(), None)
 
-    TEST1, TEST2, TEST3, TEST4, DEV, QA, UAT, STAGING, PRODUCTION = range(9)
+    TEST1, TEST2, TEST3, TEST4, DEV, ORIGIN, QA, UAT, STAGING, PRODUCTION = range(10)
 
 
 class EnvironmentUtil(object):
